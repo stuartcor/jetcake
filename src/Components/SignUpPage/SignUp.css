@@ -1,0 +1,23 @@
+body {
+    margin:  0;
+}
+.img-bg-s {
+    background: linear-gradient(rgba(163, 163, 163, 0.609),rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1514477917009-389c76a86b68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=961&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grid-bg-s{
+    background: whitesmoke !important;
+}
+
+.card-bg-s{
+    background: whitesmoke;    
+    color: black !important;
+    font-weight: 700 !important;
+    font-size: 1.25em;
+    
+}
+
+.item-s {
+    border-radius: 20px 20px;
+}
