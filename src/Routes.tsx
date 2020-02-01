@@ -22,6 +22,7 @@ const Router = (props: any) => (
         <Route exact path="/Login" component={Login} />
         <PrivateRoute exact path="/Profile" component={Profile} />
         <PrivateRoute exact path="/Edit" component={Edit} />
+        <Route path="*"  component={Home} />
     </Switch>
   
 )
