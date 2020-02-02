@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonButtons, IonIcon, IonMenu, IonList, IonItem, IonRouterOutlet, IonMenuButton, IonApp, IonGrid, IonRow, IonCol, IonImg } from '@ionic/react';
+import { IonGrid, IonRow, IonCol, IonImg } from '@ionic/react';
 import React, { Component } from 'react';
 
 import NavBar from '../Layout/NavBar';
@@ -22,10 +22,6 @@ let toShow = [
 ]
 
 class HomePage extends Component {
-  constructor(props: any) {
-    super(props)
-}
-
   
  render(){
   return (

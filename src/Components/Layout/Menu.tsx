@@ -1,5 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonButtons, IonIcon, IonMenu, IonList, IonItem, IonRouterOutlet, IonMenuButton, IonApp, IonGrid, IonRow, IonCol, IonAvatar, IonImg } from '@ionic/react';
-import React, { Component, useState } from 'react';
+import { IonContent, IonHeader,  IonTitle, IonToolbar,  IonButtons,  IonMenu, IonList, IonItem, IonRouterOutlet, IonMenuButton,  IonAvatar, IonImg } from '@ionic/react';
+import React, {  useState } from 'react';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import './style.css'
@@ -25,7 +25,7 @@ function Menu (props: any){
             return <Redirect to='/'></Redirect>
          }
 
-         let img = props.photo == '' ? <IonImg src={profilePic}></IonImg>
+         let img = props.photo === '' ? <IonImg src={profilePic}></IonImg>
                                     : <IonImg src={props.photo}></IonImg>
 
         return (

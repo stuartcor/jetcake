@@ -47,11 +47,11 @@ class ProfilePage extends Component {
     } 
 
     render(){
-        let imgShow = this.state.user.photo == '' ? 
+        let imgShow = this.state.user.photo === '' ? 
             <IonImg className="user-no-profile"></IonImg>
         : 
-            <div className="user-profile">
-                <IonImg style={{borderRadious: '50%'}} src={this.state.user.photo}></IonImg>;
+            <div className="circle">
+                <img  src={this.state.user.photo} className="image"></img>;
             </div>
 
 

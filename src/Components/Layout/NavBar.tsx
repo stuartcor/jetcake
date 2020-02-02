@@ -1,6 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonButtons, IonIcon, IonMenu, IonList, IonItem, IonRouterOutlet, IonMenuButton, IonApp, IonGrid, IonRow, IonCol } from '@ionic/react';
-import React, { Component } from 'react';
-import { Redirect } from 'react-router';
+import {  IonTitle, IonToolbar, IonButton, IonButtons} from '@ionic/react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css'
 

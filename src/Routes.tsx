@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Switch, Route, Redirect, RouteComponentProps, RouteProps } from 'react-router-dom';
-import App from './App';
+import { Switch, Route, Redirect,  RouteProps } from 'react-router-dom';
 
 
 /*Pages to Show*/ 

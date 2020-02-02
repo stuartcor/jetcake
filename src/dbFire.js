@@ -160,7 +160,7 @@ class fireApp {
                     countAnswer++;
                     //If counter is iqual to documents retrive from firestore 
                     //then resolve the promise whit data
-                    if(countAnswer == snap.docs.length){
+                    if(countAnswer === snap.docs.length){
                         resolve({...user, answers});
                     }
                 })

@@ -4,14 +4,13 @@ import fireApp from '../../dbFire';
 import Menu from '../Layout/Menu';
 import Footer from '../Layout/Footer';
 
-import { IonGrid, IonRow, IonCol, IonItem, IonImg, IonLabel, IonInput, IonIcon, IonButton, IonTextarea, IonDatetime, IonCard, IonCardHeader, IonCardSubtitle} from '@ionic/react';
+import { IonGrid, IonRow, IonCol, IonItem, IonImg, IonLabel, IonInput, IonIcon, IonButton, IonTextarea, IonDatetime, IonCard, IonCardHeader, IonCardSubtitle, IonToast} from '@ionic/react';
 
 import firebase from 'firebase';
 
-import { cloudUpload, key } from 'ionicons/icons';
+import { cloudUpload} from 'ionicons/icons';
 let isUser: any;
 let user = {};
-let messageAlert = '';
 
 
 class EditPage extends Component {
@@ -26,7 +25,8 @@ class EditPage extends Component {
             dateBirth: '',
             photo: '',
             answers: [],
-        }
+        }, 
+        showToast: false,
     }
 
     
@@ -80,9 +80,10 @@ class EditPage extends Component {
             evt.stopPropagation();
             evt.preventDefault();  
             fireApp.updateUser(isUser.uid, user)
+            this.setState({...this.state, showToast: true})
         }
 
-        let imgShow = this.state.user.photo == '' ? 
+        let imgShow = this.state.user.photo === '' ? 
         <>
             <div className="user-no-profile">
                 <input className="img-upload" type="file" accept="image/*" capture onChange={handlePicture}></input>
@@ -91,7 +92,7 @@ class EditPage extends Component {
         : 
         <>
          <div className="container">
-            <IonImg  src={this.state.user.photo} className="image"></IonImg>   
+            <img  src={this.state.user.photo} className="image"></img>   
             <div className="overlay">
                 <IonIcon className="icon" icon={cloudUpload}>
                 </IonIcon> 
@@ -105,9 +106,15 @@ class EditPage extends Component {
 
         return(
             <>
-                <div className="sticky">
-                    <Menu photo={this.state.user.photo}></Menu>
-                </div>
+                <Menu photo={this.state.user.photo}></Menu>
+                <IonToast
+                    isOpen={this.state.showToast}
+                    onDidDismiss={() => 
+                        this.setState({...this.state, showToast: false})
+                    }
+                    message="Your changes have been saved."
+                    duration={800}
+                />
 
                 <section className="img-bg-s">
                     <form onSubmit={SubmitForm}>
@@ -119,7 +126,7 @@ class EditPage extends Component {
                             </IonRow>
                             <IonRow className="ion-justify-content-center">
                                 <IonCol></IonCol>
-                                <IonCol size="6" sizeSm="4" className="ion-align-self-center ">                                
+                                <IonCol size="6" sizeSm="2" className="ion-align-self-center ">                                
                                     {imgShow}
                                 </IonCol>                            
                                 <IonCol></IonCol>

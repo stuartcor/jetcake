@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import { IonPage, IonGrid, IonRow, IonCol, IonInput, IonItem, IonLabel, IonButton, IonDatetime, IonCard, IonCardHeader, IonTitle, IonCardContent, IonSelect, IonSelectOption, IonLoading, IonAlert } from '@ionic/react'
+import {IonGrid, IonRow, IonCol, IonInput, IonItem, IonLabel, IonButton, IonDatetime, IonCard, IonCardHeader, IonTitle, IonCardContent, IonSelect, IonSelectOption, IonLoading, IonAlert } from '@ionic/react'
 
 import fireApp from '../../dbFire'; //Import new Instance of Firebase 
 
@@ -161,7 +161,7 @@ class SignUpPage extends Component {
                                         <IonRow>
                                             <IonCol>
                                                 <IonSelect interface="action-sheet" placeholder="First Question" name='sqFirst' onIonChange={HandleData}>
-                                                { this.state.securityQ == undefined ? null : this.state.securityQ.map( (data: any) => {
+                                                { this.state.securityQ === undefined ? null : this.state.securityQ.map( (data: any) => {
                                                         return <IonSelectOption value={data.id} key={data.id}>{data.question}</IonSelectOption>
                                                     })}
                                                 </IonSelect>
@@ -174,7 +174,7 @@ class SignUpPage extends Component {
                                         <IonRow>
                                             <IonCol>                                                
                                                 <IonSelect interface="action-sheet" placeholder="Second Question" name='sqSecond' onIonChange={HandleData}>
-                                                { this.state.securityQ == undefined ? null : this.state.securityQ.map( (data: any) => {
+                                                { this.state.securityQ === undefined ? null : this.state.securityQ.map( (data: any) => {
                                                         return <IonSelectOption value={data.id} key={data.id}>{data.question}</IonSelectOption>
                                                     })}
                                                 </IonSelect>
@@ -187,7 +187,7 @@ class SignUpPage extends Component {
                                         <IonRow>
                                             <IonCol>                                                
                                                 <IonSelect interface="action-sheet" placeholder="Third Question" name='sqThird' onIonChange={HandleData}>
-                                                    { this.state.securityQ == undefined ? null : this.state.securityQ.map( (data: any) => {
+                                                    { this.state.securityQ === undefined ? null : this.state.securityQ.map( (data: any) => {
                                                         return <IonSelectOption value={data.id} key={data.id}>{data.question}</IonSelectOption>
                                                     })}
                                                 </IonSelect>

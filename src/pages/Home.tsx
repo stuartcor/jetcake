@@ -1,8 +1,7 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonButtons, IonIcon, IonMenu, IonList, IonItem, IonRouterOutlet, IonMenuButton, IonApp, IonGrid, IonRow, IonCol, IonImg } from '@ionic/react';
+import {IonPage} from '@ionic/react';
 import React, { Component } from 'react';
 import HomePage from '../Components/HomePage/HomePage'
 
-import fireApp from '../dbFire';
 import { Redirect } from 'react-router';
 import firebase from 'firebase';
 

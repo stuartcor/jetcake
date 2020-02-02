@@ -18,16 +18,16 @@ class Footer extends Component {
                     <IonToolbar>
                         <IonButtons slot="primary">
                             <IonButton>
-                                <a target="_blank" href="https://www.facebook.com/cordeleon">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cordeleon">
                                     <IonIcon icon={logoFacebook}></IonIcon>
                                 </a>
                             </IonButton>
                             <IonButton>
-                                <a target="_blank" href="https://www.linkedin.com/in/stuartcor">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/stuartcor">
                                     <IonIcon icon={logoLinkedin}></IonIcon>
                                 </a>
                             </IonButton><IonButton>
-                                <a target="_blank" href="http://">
+                                <a target="_blank" rel="noopener noreferrer" href="http://">
                                     <IonIcon icon={logoGithub}></IonIcon>
                                 </a>
                             </IonButton>
