@@ -1,7 +1,9 @@
 INSTRUCCION TO USE:
 
 NEED TO HAVE INSTALL:
+
 -NODE JS. 
+
 -GIT (To Clone the repository)
 
 To Clone the repository:
@@ -15,14 +17,10 @@ To Clone the repository:
   
 -Inside the jetcake folder run the next command:
 
-  npm install 
-  
-  -this is use to install all the project dependencies. 
+  npm install (this is use to install all the project dependencies)
   
 -When the dependencies were installed run the next command to init the server: 
 
-  npm run start
-  
-  -this command will initialize a server to preview the project. 
+  npm run start (this command will initialize a server to preview the project) 
   
  -When the server is running go to the link to see the project. 
